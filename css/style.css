@@ -1,0 +1,67 @@
+/* board css */
+#column1, #column2, #column3, #column4, #column5, #column6, #column7 {
+	float:left;
+	left: 200px;
+}
+
+#column1 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid red;
+
+}
+
+#column2 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid orange;
+
+}
+
+#column3 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid yellow;
+
+}
+
+#column4 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid green;
+
+}
+
+#column5 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid blue;
+
+}
+
+#column6 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid purple;
+
+}
+
+#column7 div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid black;
+
+}
+
+/* player/opponent disc color */
+.discRed {
+  background-color: red;
+}
+
+.discBlue {
+  background-color: blue;
+  border-radius: 50%;
+}
+
+/* start button and how to play button */
+
