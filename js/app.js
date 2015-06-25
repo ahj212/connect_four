@@ -33,7 +33,7 @@ var columnBut1 = function() {
     if (turn%2 != 0) { // this if statement only runs for player one
   	turn++; // adds turn number
 
-      if ( $("#a6").hasClass("blank") ) {  
+      if ( $("#a6").hasClass("blank") ) {  // checking #a6 first b/c it is located   
   	    $("#a6").removeClass("blank").addClass("discRed");
       } else if ( $("#a5").hasClass("blank") ) {
 	    $("#a5").removeClass("blank").addClass("discRed");
@@ -317,5 +317,116 @@ var columnBut7 = function() {
      }
   }   
 } 
+
+
+
+
+
+// var columnClicked = function  () {
+// 	var index =  parseInt($(this).attr("id")[6]) - 1
+// 	var cols = ["a", "b", "c", "d", "e", "f", "g"]
+// 	if ( $("#" + cols[index] + "1").hasClass("blank") || $("#" + cols[index] + "2").hasClass("blank") || $("#" + cols[index] + "3").hasClass("blank") || $("#" + cols[index] + "4").hasClass("blank") || $("#" + cols[index] + "5").hasClass("blank") || $("#" + cols[index] + "6").hasClass("blank") ) {
+
+//     if (turn%2 != 0) {
+//   	turn++;
+
+//       if ( $("#" + cols[index] + "6").hasClass("blank") ) {  
+//   	    $("#" + cols[index] + "6").removeClass("blank").addClass("discRed");
+//       } else if ( $("#" + cols[index] + "5").hasClass("blank") ) {
+// 	    $("#" + cols[index] + "5").removeClass("blank").addClass("discRed");
+//       } else if ( $("#" + cols[index] + "4").hasClass("blank") ) {
+// 	    $("#" + cols[index] + "4").removeClass("blank").addClass("discRed");
+//       } else if ( $("#" + cols[index] + "3").hasClass("blank") ) {
+// 	    $("#" + cols[index] + "3").removeClass("blank").addClass("discRed");
+//       } else if ( $("#" + cols[index] + "2").hasClass("blank") ) {
+// 	    $("#" + cols[index] + "2").removeClass("blank").addClass("discRed");
+//       } else if ( $("#" + cols[index] + "1").hasClass("blank") ) {
+// 	    $("#" + cols[index] + "1").removeClass("blank").addClass("discRed");
+//       }
+//     } else if (turn%2 == 0) {
+//   	 turn++;
+
+//        if ( $("#" + cols[index] + "6").hasClass("blank") ) {
+//   	     $("#" + cols[index] + "6").removeClass("blank").addClass("discBlue");
+//        } else if ( $("#" + cols[index] + "5").hasClass("blank") ) {
+// 	     $("#" + cols[index] + "5").removeClass("blank").addClass("discBlue");
+//        } else if ( $("#" + cols[index] + "4").hasClass("blank") ) {
+// 	     $("#" + cols[index] + "4").removeClass("blank").addClass("discBlue");
+//        } else if ( $("#" + cols[index] + "3").hasClass("blank") ) {
+// 	     $("#" + cols[index] + "3").removeClass("blank").addClass("discBlue");
+//        } else if ( $("#" + cols[index] + "2").hasClass("blank") ) {
+// 	      $("#" + cols[index] + "2").removeClass("blank").addClass("discBlue");
+//        } else if ( $("#" + cols[index] + "1").hasClass("blank") ) {
+// 	     $("#" + cols[index] + "1").removeClass("blank").addClass("discBlue");
+//        }
+//      }
+//   }   
+	
+// }
+
+
+
+var checkWin = function  () {
+	checkHorizontal();
+	checkVertical();
+	checkDiagonal();
+}
+
+var checkHorizontal = function  () {
+
+}
+
+var checkVertical = function  () {
+	var columns = $(".column");
+	for(var i = 0; i < columns.length; i++){
+		var currentColumnString = ""
+		var currentColumn = columns.eq(i);
+		var innerDivs = currentColumn.children()
+		for(var j = 0; j < innerDivs.length; j++){
+			var className = innerDivs.eq(j).attr('class')
+			currentColumnString += className
+			console.log(currentColumnString)
+			if(currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
+				alert("Player2 wins!");
+			} else if(currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
+				return true
+			}
+		}
+	}
+}
+
+var checkDiagonal = function  () {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
