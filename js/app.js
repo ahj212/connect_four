@@ -1,12 +1,30 @@
 $(document).ready(function() {
   $('#startBut').on("click", startBut);
   $('#howToPlayBut').on("click", howToPlayBut);
-  $("#column1").on("click", columnBut1);
-  $("#column2").on("click", columnBut2);
-  $("#column3").on("click", columnBut3);
-  $("#column4").on("click", columnBut4);
-  $("#column5").on("click", columnBut5);
-  $("#column6").on("click", columnBut6);
+  $("#column1").on("click", function() {
+  	columnBut1();
+  	checkWin();
+  });
+  $("#column2").on("click", function() {
+  	columnBut2();
+  	checkWin();
+  });
+  $("#column3").on("click", function() {
+  	columnBut3();
+  	checkWin();
+  });
+  $("#column4").on("click", function() {
+  	columnBut4();
+  	checkWin();
+  });
+  $("#column5").on("click", function() {
+  	columnBut5();
+  	checkWin();
+  });
+  $("#column6").on("click", function() {
+  	columnBut6();
+  	checkWin();
+  });
   $("#column7").on("click", function() {
   	columnBut7();
   	checkWin();
@@ -321,6 +339,114 @@ var columnBut7 = function() {
   }   
 } 
 
+// functions that check winning conditions
+
+var checkWin = function  () {
+	checkHorizontal();
+	checkVertical();
+	checkDiagonal();
+};
+
+var checkHorizontal = function  () {
+  console.log("checking horizontal WC");
+  //array of all the rows
+  var row1 = [ $("#a1"), $("#b1"), $("#c1"), $("#d1"), $("#e1"), $("#f1"), $("#g1") ];
+  var row2 = [ $("#a2"), $("#b2"), $("#c2"), $("#d2"), $("#e2"), $("#f2"), $("#g2") ];
+  var row3 = [ $("#a3"), $("#b3"), $("#c3"), $("#d3"), $("#e3"), $("#f3"), $("#g3") ];
+  var row4 = [ $("#a4"), $("#b4"), $("#c4"), $("#d4"), $("#e4"), $("#f4"), $("#g4") ];
+  var row5 = [ $("#a5"), $("#b5"), $("#c5"), $("#d5"), $("#e5"), $("#f5"), $("#g5") ];
+  var row6 = [ $("#a6"), $("#b6"), $("#c6"), $("#d6"), $("#e6"), $("#f6"), $("#g6") ];
+  // all the rows in one array
+  var rows =  [ row1, row2, row3, row4, row5, row6 ];
+
+  for(var i = 0; i < rows.length; i++){
+  	var currentRowString = "";
+  	var currentRow = rows[i];
+  	//console.log(currentRow[0]);
+
+  	for (var j = 0; j < currentRow.length; j++) {
+  	  //console.log(currentRow[j]);
+  	  var horizontalClassName = currentRow[j].attr('class');
+  	  //console.log(horizontalClassName);
+  	  currentRowString += horizontalClassName;
+  	  //console.log(currentRowString);
+  	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
+  	    alert("You lose!");
+  	    return true;	
+  	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
+  	  	alert("You win!");
+  	  	return true;
+  	  }
+  	}
+  }
+};
+
+var checkVertical = function() {
+	console.log("checking vertical WC");
+	var columns = $(".column");
+	for(var i = 0; i < columns.length; i++){
+		var currentColumnString = "";
+		var currentColumn = columns.eq(i);
+		var innerDivs = currentColumn.children();
+		for(var j = 0; j < innerDivs.length; j++){
+			var verticalClassName = innerDivs.eq(j).attr('class');
+			//console.log(verticalClassName);
+			currentColumnString += verticalClassName;
+			//console.log(currentColumnString);
+			if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
+				alert("You lose!");
+				return true;
+			} else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
+				alert("You win!");
+				return true;
+			}
+		}
+	}
+};
+
+var checkDiagonal = function() {
+  console.log("checking diagonal WC");
+  // arrays for diagonals that go / way	
+  var diagonal1 = [ $("#a4"), $("#b3"), $("#c2"), $("#d1") ];
+  var diagonal2 = [ $("#a5"), $("#b4"), $("#c3"), $("#d2"), $("#e1") ];
+  var diagonal3 = [ $("#a6"), $("#b5"), $("#c4"), $("#d3"), $("#e2"), $("#f1") ];
+  var diagonal4 = [ $("#b6"), $("#c5"), $("#d4"), $("#e3"), $("#f2"), $("#g1") ];
+  var diagonal5 = [ $("#c6"), $("#d5"), $("#e4"), $("#f3"), $("#g2") ];
+  var diagonal6 = [ $("#d6"), $("#e5"), $("#f4"), $("#g3") ];
+  // arrays for diagonals that go \ way
+  var diagonal7 = [ $("#g4"), $("#f3"), $("#e2"), $("#d1") ];
+  var diagonal8 = [ $("#g5"), $("#f4"), $("#e3"), $("#d2"), $("#c1") ];
+  var diagonal9 = [ $("#g6"), $("#f5"), $("#e4"), $("#d3"), $("#c2"), $("#b1") ];
+  var diagonal10 = [ $("#f6"), $("#e5"), $("#d4"), $("#c3"), $("#b2"), $("#a1") ];
+  var diagonal11 = [ $("#e6"), $("#d5"), $("#c4"), $("#b3"), $("#a2") ];
+  var diagonal12 = [ $("#d6"), $("#c5"), $("#b4"), $("#a3") ];
+  // array for all the diagonals
+  var diagonals = [ diagonal1, diagonal2, diagonal3, diagonal4, diagonal5, diagonal6, diagonal7, diagonal8, diagonal9, diagonal10, diagonal11, diagonal12 ];
+
+  for(var i = 0; i < diagonals.length; i++){
+  	var currentDiagonalString = "";
+  	var currentDiagonal = diagonals[i];
+
+  	for(var j = 0; j < currentDiagonal.length; j++) {
+  	  //console.log(currentDiagonal[j]);
+  	  var diagonalClassName = currentDiagonal[j].attr("class");
+  	  //console.log(diagonalClassName);
+  	  currentDiagonalString += diagonalClassName;
+  	  //console.log(currentDiagonalString);
+
+  	  if (currentDiagonalString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
+  	  	alert("You lose!");
+  	  	return true;
+  	  } else if (currentDiagonalString.indexOf("discReddiscReddiscReddiscRed") != -1) {
+  	  	  alert("You win!");
+  	  	  return true;
+  	  }
+  	}
+  }  
+}
+
+
+
 
 
 
@@ -366,104 +492,4 @@ var columnBut7 = function() {
 //   }   
 	
 // }
-
-var checkWin = function  () {
-	checkHorizontal();
-	checkVertical();
-	checkDiagonal();
-}
-
-var checkHorizontal = function  () {
-  //array of all the rows
-  var row1 = [ $("#a1"), $("#b1"), $("#c1"), $("#d1"), $("#e1"), $("#f1"), $("#g1") ];
-  var row2 = [ $("#a2"), $("#b2"), $("#c2"), $("#d2"), $("#e2"), $("#f2"), $("#g2") ];
-  var row3 = [ $("#a3"), $("#b3"), $("#c3"), $("#d3"), $("#e3"), $("#f3"), $("#g3") ];
-  var row4 = [ $("#a4"), $("#b4"), $("#c4"), $("#d4"), $("#e4"), $("#f4"), $("#g4") ];
-  var row5 = [ $("#a5"), $("#b5"), $("#c5"), $("#d5"), $("#e5"), $("#f5"), $("#g5") ];
-  var row6 = [ $("#a6"), $("#b6"), $("#c6"), $("#d6"), $("#e6"), $("#f6"), $("#g6") ];
-  // all the rows in one array
-  var rows =  [ row1, row2, row3, row4, row5, row6 ];
-
-  for(var i = 0; i < rows.length; i++){
-  	var currentRowString = "";
-  	var currentRow = rows[i];
-  	//console.log(currentRow[0]);
-
-  	for (var j = 0; j <currentRow.length; j++) {
-  		console.log(currentRow[j]);
-  	  var horizontalClassName = currentRow[j].attr('class');
-  	  console.log(horizontalClassName);
-  	  currentRowString += horizontalClassName;
-  	  console.log(currentRowString);
-  	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
-  	    return true;	
-  	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
-  	  	return true;
-  	  }
-  	}
-  }
-};
-
-var checkVertical = function  () {
-	var columns = $(".column");
-	for(var i = 0; i < columns.length; i++){
-		var currentColumnString = "";
-		var currentColumn = columns.eq(i);
-		var innerDivs = currentColumn.children();
-		for(var j = 0; j < innerDivs.length; j++){
-			var verticalClassName = innerDivs.eq(j).attr('class');
-			console.log(verticalClassName);
-			currentColumnString += verticalClassName;
-			console.log(currentColumnString);
-			if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
-				alert("player 2 wins!");
-				return true;
-			} else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
-				alert("player 1 wins!");
-				return true;
-			}
-		}
-	}
-}
-
-var checkDiagonal = function  () {
-  var diagonal1 = [ $("a4"), $("#b3"), $("#c2"), $("#d1") ];
-  var diagonal2 = [ $("a5"), $("#b4"), $("#c3"), $("#d2"), $("#e1") ];
-  var diagonal3 = [ $("a6"), $("#b5"), $("#c4"), $("#d3"), $("#e2"), $("#f1") ];
-  var diagonal4 = [ $("#b6"), $("#c5"), $("#d4"), $("#e3"), $("#f2"), $("#g1") ];
-  var diagonal5 = [ $("#") ]
-
-  var diagonal = [ diagonal1, ]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
