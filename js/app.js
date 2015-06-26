@@ -7,7 +7,10 @@ $(document).ready(function() {
   $("#column4").on("click", columnBut4);
   $("#column5").on("click", columnBut5);
   $("#column6").on("click", columnBut6);
-  $("#column7").on("click", columnBut7);
+  $("#column7").on("click", function() {
+  	columnBut7();
+  	checkWin();
+  });
 });
 
 // start button
@@ -364,8 +367,6 @@ var columnBut7 = function() {
 	
 // }
 
-
-
 var checkWin = function  () {
 	checkHorizontal();
 	checkVertical();
@@ -373,30 +374,66 @@ var checkWin = function  () {
 }
 
 var checkHorizontal = function  () {
+  //array of all the rows
+  var row1 = [ $("#a1"), $("#b1"), $("#c1"), $("#d1"), $("#e1"), $("#f1"), $("#g1") ];
+  var row2 = [ $("#a2"), $("#b2"), $("#c2"), $("#d2"), $("#e2"), $("#f2"), $("#g2") ];
+  var row3 = [ $("#a3"), $("#b3"), $("#c3"), $("#d3"), $("#e3"), $("#f3"), $("#g3") ];
+  var row4 = [ $("#a4"), $("#b4"), $("#c4"), $("#d4"), $("#e4"), $("#f4"), $("#g4") ];
+  var row5 = [ $("#a5"), $("#b5"), $("#c5"), $("#d5"), $("#e5"), $("#f5"), $("#g5") ];
+  var row6 = [ $("#a6"), $("#b6"), $("#c6"), $("#d6"), $("#e6"), $("#f6"), $("#g6") ];
+  // all the rows in one array
+  var rows =  [ row1, row2, row3, row4, row5, row6 ];
 
-}
+  for(var i = 0; i < rows.length; i++){
+  	var currentRowString = "";
+  	var currentRow = rows[i];
+  	//console.log(currentRow[0]);
+
+  	for (var j = 0; j <currentRow.length; j++) {
+  		console.log(currentRow[j]);
+  	  var horizontalClassName = currentRow[j].attr('class');
+  	  console.log(horizontalClassName);
+  	  currentRowString += horizontalClassName;
+  	  console.log(currentRowString);
+  	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
+  	    return true;	
+  	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
+  	  	return true;
+  	  }
+  	}
+  }
+};
 
 var checkVertical = function  () {
 	var columns = $(".column");
 	for(var i = 0; i < columns.length; i++){
-		var currentColumnString = ""
+		var currentColumnString = "";
 		var currentColumn = columns.eq(i);
-		var innerDivs = currentColumn.children()
+		var innerDivs = currentColumn.children();
 		for(var j = 0; j < innerDivs.length; j++){
-			var className = innerDivs.eq(j).attr('class')
-			currentColumnString += className
-			console.log(currentColumnString)
-			if(currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
-				alert("Player2 wins!");
-			} else if(currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
-				return true
+			var verticalClassName = innerDivs.eq(j).attr('class');
+			console.log(verticalClassName);
+			currentColumnString += verticalClassName;
+			console.log(currentColumnString);
+			if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
+				alert("player 2 wins!");
+				return true;
+			} else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
+				alert("player 1 wins!");
+				return true;
 			}
 		}
 	}
 }
 
 var checkDiagonal = function  () {
-	
+  var diagonal1 = [ $("a4"), $("#b3"), $("#c2"), $("#d1") ];
+  var diagonal2 = [ $("a5"), $("#b4"), $("#c3"), $("#d2"), $("#e1") ];
+  var diagonal3 = [ $("a6"), $("#b5"), $("#c4"), $("#d3"), $("#e2"), $("#f1") ];
+  var diagonal4 = [ $("#b6"), $("#c5"), $("#d4"), $("#e3"), $("#f2"), $("#g1") ];
+  var diagonal5 = [ $("#") ]
+
+  var diagonal = [ diagonal1, ]
 }
 
 
