@@ -7,30 +7,37 @@ $(document).ready(function() {
   $("#column1").on("click", function() {
   	columnBut1();
   	checkWin();
+  	resetGame();
   });
   $("#column2").on("click", function() {
   	columnBut2();
   	checkWin();
+  	resetGame();
   });
   $("#column3").on("click", function() {
   	columnBut3();
   	checkWin();
+  	resetGame();
   });
   $("#column4").on("click", function() {
   	columnBut4();
   	checkWin();
+  	resetGame();
   });
   $("#column5").on("click", function() {
   	columnBut5();
   	checkWin();
+  	resetGame();
   });
   $("#column6").on("click", function() {
   	columnBut6();
   	checkWin();
+  	resetGame();
   });
   $("#column7").on("click", function() {
   	columnBut7();
   	checkWin();
+  	resetGame();
   });
 });
 
@@ -449,26 +456,33 @@ var checkTie = function() {
 	}
 };
 
+var resetGame = function () {
+	if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
+	  $(".column").children().attr("class", "blank");
+	  turn = 1;
+	}
+}
+
 
 // start button
 var startBut = function () {
   console.log("start button clicked.")
-  var playerOneName = prompt("Type in your name.");
+  var playerOneName = prompt("Type in your name");
   var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
 };
 
 // how to play button
 var howToPlayBut = function() {
-  console.log("how to play button clicked.");
+  console.log("how to play button clicked");
   alert("Line four of your discs together either vertically, horizontally, or diagnoally!");
 };
 
 // reset button
 var resetBut = function() {
-  console.log("reset button clicked.");
+  console.log("reset button clicked");
   $(".column").children().attr("class", "blank");
+  turn = 1;
 }
-
 
 
 
