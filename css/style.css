@@ -1,7 +1,38 @@
-/* board css */
+html {
+  background-image: url("9Tpo5ALqc.jpeg");
+  background-color:#E6E6E6;
+}
+
+/* gets rid of margins on the left and right side of website */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* board */
+#boardPosition {
+  float: left;
+  border: 10px;
+  width: 50%;
+  height: 500px;
+}
+
+#board {
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+/* column positions; floating left shifts the divs vertically */
 #column1, #column2, #column3, #column4, #column5, #column6, #column7 {
-	float:left;
-	left: 200px;
+  float:left;
+  left: 200px;
 }
 
 #column1 div{
@@ -53,14 +84,73 @@
 
 }
 
-/* player/opponent disc color */
+/* player disc color */
 .discRed {
-  background-color: red;
+  background-color: #A30000;
 }
 
+/* opponent disc color */
 .discBlue {
-  background-color: blue;
+  background-color: #19198D;
+}
+
+/* button position */
+#buttonPosition {
+  float: right;
+  border: 10px;
+  width: 50%;
+  height: 500px;
 }
 
 /* start button and how to play button */
+#startBut {
+  margin-top: 30px;
+  margin-right: 40px;
 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid  #A30000;
+  border-radius: 10px;
+}
+
+#startBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
+
+#howToPlayBut {
+  margin-right: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid #A30000;
+  border-radius: 10px;
+}
+
+#howToPlayBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
+
+#resetBut {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid #A30000;
+  border-radius: 10px;	
+}
+
+#resetBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
