@@ -1,3 +1,5 @@
+console.log("app.js loaded.")
+
 $(document).ready(function() {
   $('#startBut').on("click", startBut);
   $('#howToPlayBut').on("click", howToPlayBut);
@@ -345,6 +347,7 @@ var checkWin = function  () {
 	checkHorizontal();
 	checkVertical();
 	checkDiagonal();
+	checkTie();
 };
 
 var checkHorizontal = function  () {
@@ -445,7 +448,15 @@ var checkDiagonal = function() {
   }  
 }
 
-
+var checkTie = function() {
+	console.log("checking tie");
+	if ( (turn == 43) && (checkHorizontal() == undefined) && (checkVertical() == undefined) && (checkDiagonal() == undefined) ) {
+	  alert("It's a tie!");
+	  return true;
+	} else {
+	    return false;
+	}
+}
 
 
 
