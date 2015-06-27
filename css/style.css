@@ -27,6 +27,7 @@ h1 {
 #board {
   margin-left: 15%;
   margin-top: 5%;
+  min-width: 500px;
 }
 
 /* column positions; floating left shifts the divs vertically */
@@ -94,17 +95,18 @@ h1 {
   background-color: #19198D;
 }
 
-/* button position */
-#buttonPosition {
+/* button and result position */
+#buttonAndResultPosition {
   float: right;
   border: 10px;
   width: 50%;
   height: 500px;
 }
 
-/* start button and how to play button */
+/* start button, how to play button, restart button */
 #startBut {
   margin-top: 30px;
+  margin-left: 50px;
   margin-right: 40px;
 
   font-family: 'Open Sans', sans-serif;
@@ -123,7 +125,7 @@ h1 {
 }
 
 #howToPlayBut {
-  margin-right: 50px;
+  margin-right: 40px;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #A30000;
@@ -153,4 +155,24 @@ h1 {
   color: #FFFFFF;
   background-color: #19198D;
   border: 2px solid #19198D;
+}
+
+/* result container */
+#resultContainer {
+  margin-top: 30px;
+  width: 450px;
+  height: 290px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #A30000;
+  border-radius: 10px;
+}
+
+.turnDisplay {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  color: #A30000;
 }

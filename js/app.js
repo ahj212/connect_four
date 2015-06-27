@@ -3,6 +3,7 @@ console.log("app.js loaded.")
 $(document).ready(function() {
   $('#startBut').on("click", startBut);
   $('#howToPlayBut').on("click", howToPlayBut);
+  $("#resetBut").on("click", resetBut);
   $("#column1").on("click", function() {
   	columnBut1();
   	checkWin();
@@ -33,16 +34,6 @@ $(document).ready(function() {
   });
 });
 
-// start button
-var startBut = function () {
-  var playerOneName = prompt("Type in your name.");
-  var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
-}
-
-// how to play button
-var howToPlayBut = function() {
-  alert("Line four of your discs together either vertically, horizontally, or diagnoally!");
-}
 
 // initial turn number
 turn = 1;
@@ -87,7 +78,7 @@ var columnBut1 = function() {
        }
      }
   }   
-}  
+};  
 
 // column 2 button
 var columnBut2 = function() {
@@ -129,7 +120,7 @@ var columnBut2 = function() {
        }
      }
   }   
-}  
+};  
 
 // column button 3
 var columnBut3 = function() {
@@ -171,7 +162,7 @@ var columnBut3 = function() {
        }
      }
   }   
-}  
+};  
 
 // column button 4
 var columnBut4 = function() {
@@ -213,7 +204,7 @@ var columnBut4 = function() {
        }
      }
   }   
-} 
+}; 
 
 // column button 5
 var columnBut5 = function() {
@@ -255,7 +246,7 @@ var columnBut5 = function() {
        }
      }
   }   
-} 
+}; 
 
 // column button 6
 var columnBut6 = function() {
@@ -297,7 +288,7 @@ var columnBut6 = function() {
        }
      }
   }   
-} 
+}; 
 
 // column button 7
 var columnBut7 = function() {
@@ -339,10 +330,10 @@ var columnBut7 = function() {
        }
      }
   }   
-} 
+}; 
 
-// functions that check winning conditions
 
+// attached checkWin function to each column click to determine winner after every turn
 var checkWin = function  () {
 	checkHorizontal();
 	checkVertical();
@@ -446,7 +437,7 @@ var checkDiagonal = function() {
   	  }
   	}
   }  
-}
+};
 
 var checkTie = function() {
 	console.log("checking tie");
@@ -456,7 +447,30 @@ var checkTie = function() {
 	} else {
 	    return false;
 	}
+};
+
+
+// start button
+var startBut = function () {
+  console.log("start button clicked.")
+  var playerOneName = prompt("Type in your name.");
+  var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
+};
+
+// how to play button
+var howToPlayBut = function() {
+  console.log("how to play button clicked.");
+  alert("Line four of your discs together either vertically, horizontally, or diagnoally!");
+};
+
+// reset button
+var resetBut = function() {
+  console.log("reset button clicked.");
+  $(".column").children().attr("class", "blank");
 }
+
+
+
 
 
 
