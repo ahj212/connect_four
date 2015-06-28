@@ -7,37 +7,30 @@ $(document).ready(function() {
   $("#column1").on("click", function() {
   	columnBut1();
   	checkWin();
-  	resetGame();
-  });
+   });
   $("#column2").on("click", function() {
   	columnBut2();
   	checkWin();
-  	resetGame();
   });
   $("#column3").on("click", function() {
   	columnBut3();
   	checkWin();
-  	resetGame();
   });
   $("#column4").on("click", function() {
   	columnBut4();
   	checkWin();
-  	resetGame();
   });
   $("#column5").on("click", function() {
   	columnBut5();
   	checkWin();
-  	resetGame();
   });
   $("#column6").on("click", function() {
   	columnBut6();
   	checkWin();
-  	resetGame();
   });
   $("#column7").on("click", function() {
   	columnBut7();
   	checkWin();
-  	resetGame();
   });
 });
 
@@ -474,11 +467,13 @@ var columnBut7 = function() {
 
 // attached checkWin function to each columnBut clicks to determine winner after every turn
 var checkWin = function  () {
-  checkHorizontal();
-  checkVertical();
-  checkDiagonal();
-  checkTie();
-  // checks total win per player
+  if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
+	$(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
+	turn = 1; // resets turn to 1
+	$(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
+    turnDisplay = 2; // resets turn display to 1
+	}
+  // updates total player wins in #resultContainer
   $("#playerOneDisplay").text(playerOneName + ": " + playerOneWinCount);
   $("#playerTwoDisplay").text(playerTwoName + ": " + playerTwoWinCount);
 
@@ -602,18 +597,19 @@ var checkTie = function() {
 
 // attached resetGame to every columnBut click
 // there's a bug here where win, loss, and tie alerts trigger twice; calling functions inside if conditional could be the culprit
-var resetGame = function () {
-	if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
-	  $(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
-	  turn = 1; // resets turn to 1
-	  $(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
-      turnDisplay = 2; // resets turn display to 1
-	}
-};
+// fixed double alert bug; turns out resetGame function was not required; combined checkWin with reset Game function. 
+// var resetGame = function () {
+	// if ( (turn == 43) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
+	//   $(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
+	//   turn = 1; // resets turn to 1
+	//   $(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
+ //      turnDisplay = 2; // resets turn display to 1
+	// }
+// };
 
 
 // start button
-// there's a bug where ": 0" pops up if you press column buttons before pressing start
+// there's a minor bug where ": 0" pops up if you press column buttons before pressing start
 var startBut = function () {
   console.log("start button clicked.")
   playerOneName = prompt("Type in player one's name:");
