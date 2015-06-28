@@ -34,6 +34,9 @@ $(document).ready(function() {
   });
 });
 
+//audio that prompts once a player wins
+var audioVictory = new Audio('FF7Victory.mp3');
+
 // initial turn number
 var turn = 1;
 
@@ -85,7 +88,7 @@ var columnBut1 = function() {
   	 turn++; 
 
        if ( $("#a6").hasClass("blank") ) {
-  	     $("#a6").removeClass("blank").addClass("discBlue"); // removes blank class and adds discBlue class that has red background color
+  	     $("#a6").removeClass("blank").addClass("discBlue"); // removes blank class and adds discBlue class that has blue background color
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a5").hasClass("blank") ) {
 	       $("#a5").removeClass("blank").addClass("discBlue");
@@ -476,7 +479,6 @@ var checkWin = function() {
   // updates total player wins in #resultContainer
   $("#playerOneDisplay").text(playerOneName + ": " + playerOneWinCount);
   $("#playerTwoDisplay").text(playerTwoName + ": " + playerTwoWinCount);
-
 };
 
 var checkHorizontal = function  () {
@@ -503,10 +505,13 @@ var checkHorizontal = function  () {
   	  currentRowString += horizontalClassName;
   	  //console.log(currentRowString);
   	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
+  	    // audio victory triggers before alert pops
+  	    audioVictory.play();
   	    alert(playerTwoName + " wins!");
   	    playerTwoWinCount++;
   	    return true;	
   	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
+  	  	audioVictory.play();
   	  	alert(playerOneName + " wins!");
 	    playerOneWinCount++;
   	  	return true;
@@ -530,10 +535,12 @@ var checkVertical = function() {
 		currentColumnString += verticalClassName;
 		//console.log(currentColumnString);
 		  if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
+			audioVictory.play();
 			alert(playerTwoName + " wins!");
 			playerTwoWinCount++;
 			return true;
 		  } else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
+			  audioVictory.play();
 			  alert(playerOneName + " wins!");
 			  playerOneWinCount++;
 			  return true;
@@ -573,10 +580,12 @@ var checkDiagonal = function() {
   	  //console.log(currentDiagonalString);
 
   	  if (currentDiagonalString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
+  	  	audioVictory.play();
   	  	alert(playerTwoName + " wins!");
 		playerTwoWinCount++;
   	  	return true;
   	  } else if (currentDiagonalString.indexOf("discReddiscReddiscReddiscRed") != -1) {
+  	  	  audioVictory.play();
   	  	  alert(playerOneName + " wins!");
 		  playerOneWinCount++;
   	  	  return true;
@@ -594,18 +603,6 @@ var checkTie = function() {
 	    return false;
 	}
 };
-
-// attached resetGame to every columnBut click
-// there's a bug here where win, loss, and tie alerts trigger twice; calling functions inside if conditional could be the culprit
-// fixed double alert bug; turns out resetGame function was not required; combined checkWin with reset Game function. 
-// var resetGame = function () {
-	// if ( (turn == 43) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
-	//   $(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
-	//   turn = 1; // resets turn to 1
-	//   $(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
- //      turnDisplay = 2; // resets turn display to 1
-	// }
-// };
 
 
 // start button
@@ -642,46 +639,4 @@ var resetBut = function() {
   turnDisplay = 2;
 }
 
-
-// var columnClicked = function  () {
-// 	var index =  parseInt($(this).attr("id")[6]) - 1
-// 	var cols = ["a", "b", "c", "d", "e", "f", "g"]
-// 	if ( $("#" + cols[index] + "1").hasClass("blank") || $("#" + cols[index] + "2").hasClass("blank") || $("#" + cols[index] + "3").hasClass("blank") || $("#" + cols[index] + "4").hasClass("blank") || $("#" + cols[index] + "5").hasClass("blank") || $("#" + cols[index] + "6").hasClass("blank") ) {
-
-//     if (turn%2 != 0) {
-//   	turn++;
-
-//       if ( $("#" + cols[index] + "6").hasClass("blank") ) {  
-//   	    $("#" + cols[index] + "6").removeClass("blank").addClass("discRed");
-//       } else if ( $("#" + cols[index] + "5").hasClass("blank") ) {
-// 	    $("#" + cols[index] + "5").removeClass("blank").addClass("discRed");
-//       } else if ( $("#" + cols[index] + "4").hasClass("blank") ) {
-// 	    $("#" + cols[index] + "4").removeClass("blank").addClass("discRed");
-//       } else if ( $("#" + cols[index] + "3").hasClass("blank") ) {
-// 	    $("#" + cols[index] + "3").removeClass("blank").addClass("discRed");
-//       } else if ( $("#" + cols[index] + "2").hasClass("blank") ) {
-// 	    $("#" + cols[index] + "2").removeClass("blank").addClass("discRed");
-//       } else if ( $("#" + cols[index] + "1").hasClass("blank") ) {
-// 	    $("#" + cols[index] + "1").removeClass("blank").addClass("discRed");
-//       }
-//     } else if (turn%2 == 0) {
-//   	 turn++;
-
-//        if ( $("#" + cols[index] + "6").hasClass("blank") ) {
-//   	     $("#" + cols[index] + "6").removeClass("blank").addClass("discBlue");
-//        } else if ( $("#" + cols[index] + "5").hasClass("blank") ) {
-// 	     $("#" + cols[index] + "5").removeClass("blank").addClass("discBlue");
-//        } else if ( $("#" + cols[index] + "4").hasClass("blank") ) {
-// 	     $("#" + cols[index] + "4").removeClass("blank").addClass("discBlue");
-//        } else if ( $("#" + cols[index] + "3").hasClass("blank") ) {
-// 	     $("#" + cols[index] + "3").removeClass("blank").addClass("discBlue");
-//        } else if ( $("#" + cols[index] + "2").hasClass("blank") ) {
-// 	      $("#" + cols[index] + "2").removeClass("blank").addClass("discBlue");
-//        } else if ( $("#" + cols[index] + "1").hasClass("blank") ) {
-// 	     $("#" + cols[index] + "1").removeClass("blank").addClass("discBlue");
-//        }
-//      }
-//   }   
-	
-// }
 
