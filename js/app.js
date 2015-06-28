@@ -609,12 +609,18 @@ var checkTie = function() {
 
 
 // start button
-// there's a minor bug where ": 0" pops up if you press column buttons before pressing start
+// if no names are typed in, default names are given
 var startBut = function () {
   console.log("start button clicked.")
   playerOneName = prompt("Type in player one's name:");
+    if (playerOneName === null) {
+      playerOneName = "Player one";
+    }
   $("#playerOneDisplay").text(playerOneName + ":");
   playerTwoName = prompt("Type in player two's name:");
+    if (playerTwoName === null) {
+      playerTwoName = "Player two";
+    }
   $("#playerTwoDisplay").text(playerTwoName + ":");
   //var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
 };
