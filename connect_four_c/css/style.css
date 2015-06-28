@@ -1,0 +1,207 @@
+html {
+  background-image: url("9Tpo5ALqc.jpeg");
+  background-color:#E6E6E6;
+}
+
+/* gets rid of margins on the left and right side of website */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* board */
+#boardPosition {
+  float: left;
+  border: 10px;
+  width: 50%;
+  height: 500px;
+}
+
+#board {
+  margin-left: 15%;
+  margin-top: 5%;
+  min-width: 500px;
+}
+
+/* column positions; floating left shifts the divs vertically */
+#column1, #column2, #column3, #column4, #column5, #column6, #column7 {
+  float:left;
+  left: 200px;
+}
+
+#column1 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#a1 {
+  border-top-left-radius: 10px;
+}
+
+#a6 {
+  border-bottom-left-radius: 10px;
+}
+
+#column2 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#column3 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#column4 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#column5 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#column6 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#column7 div{
+  height: 50px;
+  width: 50px;
+  border: 5px inset white;
+}
+
+#g1 {
+  border-top-right-radius: 10px;
+}
+
+#g6 {
+  border-bottom-right-radius: 10px;
+}
+
+/* player disc color */
+.discRed {
+  background-color: #A30000;
+}
+
+/* opponent disc color */
+.discBlue {
+  background-color: #19198D;
+}
+
+/* button and result position */
+#buttonAndResultPosition {
+  float: right;
+  border: 10px;
+  width: 50%;
+  height: 500px;
+}
+
+/* start button, how to play button, restart button */
+#startBut {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 40px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid  #A30000;
+  border-radius: 10px;
+}
+
+#startBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
+
+#howToPlayBut {
+  margin-right: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid #A30000;
+  border-radius: 10px;
+}
+
+#howToPlayBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
+
+#resetBut {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #A30000;
+
+  background-color: #FFFFFF;
+  border: 2px solid #A30000;
+  border-radius: 10px;	
+}
+
+#resetBut:hover {
+  color: #FFFFFF;
+  background-color: #19198D;
+  border: 2px solid #19198D;
+}
+
+/* result container */
+#resultContainer {
+  margin-top: 30px;
+  width: 450px;
+  height: 290px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid #A30000;
+  border-radius: 10px;
+}
+
+.turnDisplay {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #A30000;
+}
+
+#playerOneDisplay {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #A30000;
+}
+
+#playerTwoDisplay {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #A30000;
+}
