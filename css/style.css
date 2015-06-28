@@ -176,3 +176,23 @@ h1 {
   font-size: 40px;
   color: #A30000;
 }
+
+#playerOneDisplay {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #A30000;
+}
+
+#playerTwoDisplay {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #A30000;
+}
