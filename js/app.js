@@ -47,11 +47,11 @@ var turn = 1;
 // initial turn display for resultContainer, for some odd reason, needs to have +1 value more than turn to display correctly
 var turnDisplay = 2;
 
-// displays turn number in #resultContainer
+// displays initial turn number in #resultContainer
 $(".turnDisplay").text("Turn: 1");
 
 
-// column 1 button: clicking will put "discs" inside column 1.  
+// column 1 button: clicking will alter cells' class inside column 1
 var columnBut1 = function() {
   console.log("columnBut1 clicked");
 
@@ -60,46 +60,46 @@ var columnBut1 = function() {
     if (turn%2 != 0) { // this if statement only runs for player one
   	turn++; // adds turn number
 
-      if ( $("#a6").hasClass("blank") ) {  // checking #a6 first b/c it is located   
-  	    $("#a6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++); //updates #restulContainer turn number
+      if ( $("#a6").hasClass("blank") ) {  // checking #a6 first b/c it is located on the "bottom" 
+  	    $("#a6").removeClass("blank").addClass("discRed"); // removes blank class and adds discRed class that has red background color
+  	    $(".turnDisplay").text("Turn: " + turnDisplay++); // updates #resultContainer turn number
       } else if ( $("#a5").hasClass("blank") ) {
-	    $("#a5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#a4").hasClass("blank") ) {
-	    $("#a4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#a3").hasClass("blank") ) {
-	    $("#a3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#a2").hasClass("blank") ) {
-	    $("#a2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#a1").hasClass("blank") ) {
-	    $("#a1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) { // this else if statement only runs for opponent
-  	 turn++; // adds turn number
+  	 turn++; 
 
        if ( $("#a6").hasClass("blank") ) {
-  	     $("#a6").removeClass("blank").addClass("discBlue");
+  	     $("#a6").removeClass("blank").addClass("discBlue"); // removes blank class and adds discBlue class that has red background color
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a5").hasClass("blank") ) {
-	     $("#a5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#a5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a4").hasClass("blank") ) {
-	     $("#a4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#a4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a3").hasClass("blank") ) {
-	     $("#a3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#a3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a2").hasClass("blank") ) {
-	      $("#a2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#a2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#a1").hasClass("blank") ) {
-	     $("#a1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#a1").removeClass("blank").addClass("discBlue");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -118,20 +118,20 @@ var columnBut2 = function() {
   	    $("#b6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b5").hasClass("blank") ) {
-	    $("#b5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#b5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b4").hasClass("blank") ) {
-	    $("#b4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#b4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b3").hasClass("blank") ) {
-	    $("#b3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#b3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b2").hasClass("blank") ) {
-	    $("#b2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#b2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b1").hasClass("blank") ) {
-	    $("#b1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#b1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -140,20 +140,20 @@ var columnBut2 = function() {
   	     $("#b6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b5").hasClass("blank") ) {
-	     $("#b5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#b5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b4").hasClass("blank") ) {
-	     $("#b4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#b4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b3").hasClass("blank") ) {
-	     $("#b3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#b3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b2").hasClass("blank") ) {
-	      $("#b2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#b2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b1").hasClass("blank") ) {
-	     $("#b1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#b1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -172,20 +172,20 @@ var columnBut3 = function() {
   	    $("#c6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#c5").hasClass("blank") ) {
-	    $("#c5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#c5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#c4").hasClass("blank") ) {
-	    $("#c4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#c4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#c3").hasClass("blank") ) {
-	    $("#c3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#c3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#c2").hasClass("blank") ) {
-	    $("#c2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#c2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#c1").hasClass("blank") ) {
-	    $("#c1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#c1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -194,20 +194,20 @@ var columnBut3 = function() {
   	     $("#c6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#c5").hasClass("blank") ) {
-	     $("#c5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#c5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#c4").hasClass("blank") ) {
-	     $("#c4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#c4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#c3").hasClass("blank") ) {
-	     $("#c3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#c3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#c2").hasClass("blank") ) {
-	      $("#c2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#c2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#c1").hasClass("blank") ) {
-	     $("#c1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#c1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -226,20 +226,20 @@ var columnBut4 = function() {
   	    $("#d6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d5").hasClass("blank") ) {
-	    $("#d5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#d5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d4").hasClass("blank") ) {
-	    $("#d4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#d4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d3").hasClass("blank") ) {
-	    $("#d3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#d3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d2").hasClass("blank") ) {
-	    $("#d2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#d2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d1").hasClass("blank") ) {
-	    $("#d1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#d1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -248,20 +248,20 @@ var columnBut4 = function() {
   	     $("#d6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d5").hasClass("blank") ) {
-	     $("#d5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#d5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d4").hasClass("blank") ) {
-	     $("#d4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#d4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d3").hasClass("blank") ) {
-	     $("#d3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#d3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d2").hasClass("blank") ) {
-	      $("#d2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#d2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d1").hasClass("blank") ) {
-	     $("#d1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#d1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -280,20 +280,20 @@ var columnBut5 = function() {
   	    $("#e6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#e5").hasClass("blank") ) {
-	    $("#e5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#e5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#e4").hasClass("blank") ) {
-	    $("#e4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#e4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#e3").hasClass("blank") ) {
-	    $("#e3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#e3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#e2").hasClass("blank") ) {
-	    $("#e2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#e2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#e1").hasClass("blank") ) {
-	    $("#e1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#e1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -302,20 +302,20 @@ var columnBut5 = function() {
   	     $("#e6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#e5").hasClass("blank") ) {
-	     $("#e5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#e5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#e4").hasClass("blank") ) {
-	     $("#e4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#e4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#e3").hasClass("blank") ) {
-	     $("#e3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#e3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#e2").hasClass("blank") ) {
-	      $("#e2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#e2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#e1").hasClass("blank") ) {
-	     $("#e1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#e1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -334,20 +334,20 @@ var columnBut6 = function() {
   	    $("#f6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f5").hasClass("blank") ) {
-	    $("#f5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#f5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f4").hasClass("blank") ) {
-	    $("#f4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#f4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f3").hasClass("blank") ) {
-	    $("#f3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#f3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f2").hasClass("blank") ) {
-	    $("#f2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#f2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f1").hasClass("blank") ) {
-	    $("#f1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#f1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -356,20 +356,20 @@ var columnBut6 = function() {
   	     $("#f6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f5").hasClass("blank") ) {
-	     $("#f5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#f5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f4").hasClass("blank") ) {
-	     $("#f4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#f4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f3").hasClass("blank") ) {
-	     $("#f3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#f3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f2").hasClass("blank") ) {
-	      $("#f2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#f2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f1").hasClass("blank") ) {
-	     $("#f1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#f1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -388,20 +388,20 @@ var columnBut7 = function() {
   	    $("#g6").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#g5").hasClass("blank") ) {
-	    $("#g5").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#g5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#g4").hasClass("blank") ) {
-	    $("#g4").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#g4").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#g3").hasClass("blank") ) {
-	    $("#g3").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#g3").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#g2").hasClass("blank") ) {
-	    $("#g2").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#g2").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#g1").hasClass("blank") ) {
-	    $("#g1").removeClass("blank").addClass("discRed");
-	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $("#g1").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
@@ -410,20 +410,20 @@ var columnBut7 = function() {
   	     $("#g6").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#g5").hasClass("blank") ) {
-	     $("#g5").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#g5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#g4").hasClass("blank") ) {
-	     $("#g4").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#g4").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#g3").hasClass("blank") ) {
-	     $("#g3").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#g3").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#g2").hasClass("blank") ) {
-	      $("#g2").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#g2").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#g1").hasClass("blank") ) {
-	     $("#g1").removeClass("blank").addClass("discBlue");
-	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $("#g1").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
   }   
@@ -473,26 +473,28 @@ var checkHorizontal = function  () {
 };
 
 var checkVertical = function() {
-	console.log("checking vertical WC");
-	var columns = $(".column");
-	for(var i = 0; i < columns.length; i++){
-		var currentColumnString = "";
-		var currentColumn = columns.eq(i);
-		var innerDivs = currentColumn.children();
-		for(var j = 0; j < innerDivs.length; j++){
-			var verticalClassName = innerDivs.eq(j).attr('class');
-			//console.log(verticalClassName);
-			currentColumnString += verticalClassName;
-			//console.log(currentColumnString);
-			if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
-				alert("You lose!");
-				return true;
-			} else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
-				alert("You win!");
-				return true;
-			}
-		}
-	}
+  console.log("checking vertical WC");
+  var columns = $(".column");
+  
+  for(var i = 0; i < columns.length; i++){
+	var currentColumnString = "";
+	var currentColumn = columns.eq(i);
+	var innerDivs = currentColumn.children();
+		
+	  for(var j = 0; j < innerDivs.length; j++){
+		var verticalClassName = innerDivs.eq(j).attr('class');
+		//console.log(verticalClassName);
+		currentColumnString += verticalClassName;
+		//console.log(currentColumnString);
+		  if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
+			alert("You lose!");
+			return true;
+		  } else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
+			  alert("You win!");
+			  return true;
+		  }
+      }
+  }
 };
 
 var checkDiagonal = function() {
@@ -546,22 +548,23 @@ var checkTie = function() {
 	}
 };
 
-// there's a bug here where win, loss, and tie alerts triggers twice; calling functions inside if conditionals
+// attached resetGame to every columnBut click
+// there's a bug here where win, loss, and tie alerts trigger twice; calling functions inside if conditional might be culprit
 var resetGame = function () {
 	if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
-	  $(".column").children().attr("class", "blank");
-	  turn = 1;
-	  $(".turnDisplay").text("Turn: 1");
-      turnDisplay = 2;
+	  $(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
+	  turn = 1; // resets turn to 1
+	  $(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
+      turnDisplay = 2; // resets turn display to 1
 	}
-}
+};
 
 
 // start button
 var startBut = function () {
   console.log("start button clicked.")
   var playerOneName = prompt("Type in your name");
-  var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
+  //var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
 };
 
 // how to play button
