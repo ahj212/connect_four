@@ -44,7 +44,7 @@ $(document).ready(function() {
 // initial turn number
 var turn = 1;
 
-// initial turn display for resultContainer, for some odd reason, needs to have +1 value more than turn to display correctly
+// initial turn display for resultContainer, for some reason, needs to have +1 value more than turn to display correctly
 var turnDisplay = 2;
 
 // displays initial turn number in #resultContainer
@@ -474,10 +474,14 @@ var columnBut7 = function() {
 
 // attached checkWin function to each columnBut clicks to determine winner after every turn
 var checkWin = function  () {
-	checkHorizontal();
-	checkVertical();
-	checkDiagonal();
-	checkTie();
+  checkHorizontal();
+  checkVertical();
+  checkDiagonal();
+  checkTie();
+  // checks total win per player
+  $("#playerOneDisplay").text(playerOneName + ": " + playerOneWinCount);
+  $("#playerTwoDisplay").text(playerTwoName + ": " + playerTwoWinCount);
+
 };
 
 var checkHorizontal = function  () {
@@ -597,7 +601,7 @@ var checkTie = function() {
 };
 
 // attached resetGame to every columnBut click
-// there's a bug here where win, loss, and tie alerts trigger twice; calling functions inside if conditional might be culprit
+// there's a bug here where win, loss, and tie alerts trigger twice; calling functions inside if conditional could be the culprit
 var resetGame = function () {
 	if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
 	  $(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
@@ -609,6 +613,7 @@ var resetGame = function () {
 
 
 // start button
+// there's a bug where ": 0" pops up if you press column buttons before pressing start
 var startBut = function () {
   console.log("start button clicked.")
   playerOneName = prompt("Type in player one's name:");
