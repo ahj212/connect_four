@@ -39,50 +39,59 @@ h1 {
 #column1 div{
   height: 50px;
   width: 50px;
-  border: 5px solid red;
+  border: 5px inset white;
+}
 
+#a1 {
+  border-top-left-radius: 10px;
+}
+
+#a6 {
+  border-bottom-left-radius: 10px;
 }
 
 #column2 div{
   height: 50px;
   width: 50px;
-  border: 5px solid orange;
-
+  border: 5px inset white;
 }
 
 #column3 div{
   height: 50px;
   width: 50px;
-  border: 5px solid yellow;
-
+  border: 5px inset white;
 }
 
 #column4 div{
   height: 50px;
   width: 50px;
-  border: 5px solid green;
-
+  border: 5px inset white;
 }
 
 #column5 div{
   height: 50px;
   width: 50px;
-  border: 5px solid blue;
-
+  border: 5px inset white;
 }
 
 #column6 div{
   height: 50px;
   width: 50px;
-  border: 5px solid purple;
-
+  border: 5px inset white;
 }
 
 #column7 div{
   height: 50px;
   width: 50px;
-  border: 5px solid black;
+  border: 5px inset white;
+}
 
+#g1 {
+  border-top-right-radius: 10px;
+}
+
+#g6 {
+  border-bottom-right-radius: 10px;
 }
 
 /* player disc color */
