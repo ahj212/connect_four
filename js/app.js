@@ -50,10 +50,19 @@ var turnDisplay = 2;
 // displays initial turn number in #resultContainer
 $(".turnDisplay").text("Turn: 1");
 
+// initial blank value for player names
+var playerOneName = "";
+var playerTwoName = "";
+
+// initial win values for win record
+var playerOneWinCount = 0;
+var playerTwoWinCount = 0;
 
 // column 1 button: clicking will alter cells' class inside column 1
 var columnBut1 = function() {
   console.log("columnBut1 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) { // prevents game from starting if player names are empty
 
   if ( $("#a1").hasClass("blank") || $("#a2").hasClass("blank") || $("#a3").hasClass("blank") || $("#a4").hasClass("blank") || $("#a5").hasClass("blank") || $("#a6").hasClass("blank") ) {
 
@@ -102,12 +111,17 @@ var columnBut1 = function() {
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 };  
 
 // column 2 button
 var columnBut2 = function() {
   console.log("columnBut2 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#b1").hasClass("blank") || $("#b2").hasClass("blank") || $("#b3").hasClass("blank") || $("#b4").hasClass("blank") || $("#b5").hasClass("blank") || $("#b6").hasClass("blank") ) {
 
@@ -156,12 +170,17 @@ var columnBut2 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 };  
 
 // column button 3
 var columnBut3 = function() {
   console.log("columnBut3 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#c1").hasClass("blank") || $("#c2").hasClass("blank") || $("#c3").hasClass("blank") || $("#c4").hasClass("blank") || $("#c5").hasClass("blank") || $("#c6").hasClass("blank") ) {
 
@@ -210,12 +229,17 @@ var columnBut3 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 };  
 
 // column button 4
 var columnBut4 = function() {
   console.log("columnBut4 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#d1").hasClass("blank") || $("#d2").hasClass("blank") || $("#d3").hasClass("blank") || $("#d4").hasClass("blank") || $("#d5").hasClass("blank") || $("#d6").hasClass("blank") ) {
 
@@ -264,12 +288,17 @@ var columnBut4 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 }; 
 
 // column button 5
 var columnBut5 = function() {
   console.log("columnBut5 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#e1").hasClass("blank") || $("#e2").hasClass("blank") || $("#e3").hasClass("blank") || $("#e4").hasClass("blank") || $("#e5").hasClass("blank") || $("#e6").hasClass("blank") ) {
 
@@ -318,12 +347,17 @@ var columnBut5 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 }; 
 
 // column button 6
 var columnBut6 = function() {
   console.log("columnBut6 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#f1").hasClass("blank") || $("#f2").hasClass("blank") || $("#f3").hasClass("blank") || $("#f4").hasClass("blank") || $("#f5").hasClass("blank") || $("#f6").hasClass("blank") ) {
 
@@ -372,12 +406,17 @@ var columnBut6 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 }; 
 
 // column button 7
 var columnBut7 = function() {
   console.log("columnBut7 clicked");
+
+  if ( (playerOneName != "") && (playerTwoName != "") ) {
 
   if ( $("#g1").hasClass("blank") || $("#g2").hasClass("blank") || $("#g3").hasClass("blank") || $("#g4").hasClass("blank") || $("#g5").hasClass("blank") || $("#g6").hasClass("blank") ) {
 
@@ -426,6 +465,9 @@ var columnBut7 = function() {
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
+  }
+  } else {
+  	  alert("Press start to play.");
   }   
 }; 
 
@@ -462,10 +504,12 @@ var checkHorizontal = function  () {
   	  currentRowString += horizontalClassName;
   	  //console.log(currentRowString);
   	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
-  	    alert("You lose!");
+  	    alert(playerTwoName + " wins!");
+  	    playerTwoWinCount++;
   	    return true;	
   	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
-  	  	alert("You win!");
+  	  	alert(playerOneName + " wins!");
+	    playerOneWinCount++;
   	  	return true;
   	  }
   	}
@@ -487,10 +531,12 @@ var checkVertical = function() {
 		currentColumnString += verticalClassName;
 		//console.log(currentColumnString);
 		  if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
-			alert("You lose!");
+			alert(playerTwoName + " wins!");
+			playerTwoWinCount++;
 			return true;
 		  } else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
-			  alert("You win!");
+			  alert(playerOneName + " wins!");
+			  playerOneWinCount++;
 			  return true;
 		  }
       }
@@ -528,10 +574,12 @@ var checkDiagonal = function() {
   	  //console.log(currentDiagonalString);
 
   	  if (currentDiagonalString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
-  	  	alert("You lose!");
+  	  	alert(playerTwoName + " wins!");
+		playerTwoWinCount++;
   	  	return true;
   	  } else if (currentDiagonalString.indexOf("discReddiscReddiscReddiscRed") != -1) {
-  	  	  alert("You win!");
+  	  	  alert(playerOneName + " wins!");
+		  playerOneWinCount++;
   	  	  return true;
   	  }
   	}
@@ -563,7 +611,10 @@ var resetGame = function () {
 // start button
 var startBut = function () {
   console.log("start button clicked.")
-  var playerOneName = prompt("Type in your name");
+  playerOneName = prompt("Type in player one's name:");
+  $("#playerOneDisplay").text(playerOneName + ":");
+  playerTwoName = prompt("Type in player two's name:");
+  $("#playerTwoDisplay").text(playerTwoName + ":");
   //var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
 };
 
@@ -581,10 +632,6 @@ var resetBut = function() {
   $(".turnDisplay").text("Turn: 1");
   turnDisplay = 2;
 }
-
-
-
-
 
 
 // var columnClicked = function  () {
