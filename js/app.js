@@ -466,7 +466,7 @@ var columnBut7 = function() {
 
 
 // attached checkWin function to each columnBut clicks to determine winner after every turn
-var checkWin = function  () {
+var checkWin = function() {
   if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
 	$(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
 	turn = 1; // resets turn to 1
@@ -610,19 +610,21 @@ var checkTie = function() {
 
 // start button
 // if no names are typed in, default names are given
+// minor bug where ":0" pops up after pressing column button before pressing start persists
 var startBut = function () {
   console.log("start button clicked.")
   playerOneName = prompt("Type in player one's name:");
     if (playerOneName === null) {
-      playerOneName = "Player one";
+      playerOneName = "Player One";
     }
   $("#playerOneDisplay").text(playerOneName + ":");
   playerTwoName = prompt("Type in player two's name:");
     if (playerTwoName === null) {
-      playerTwoName = "Player two";
+      playerTwoName = "Player Two";
     }
   $("#playerTwoDisplay").text(playerTwoName + ":");
-  //var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays
+  
+  //var humanOrCompOpp = confirm("Play against another human?"); //if true, playerTwo plays. if false, computer plays. NOT IMPLEMENTED
 };
 
 // how to play button
