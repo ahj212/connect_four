@@ -124,45 +124,45 @@ var columnBut2 = function() {
     if (turn%2 != 0) {
   	turn++;
 
-      if ( $("#b6").hasClass("blank") ) {  
-  	    $("#b6").removeClass("blank").addClass("discRed");
+      if ( $("#b1").hasClass("blank") ) {  
+  	    $("#b1").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#b5").hasClass("blank") ) {
-	      $("#b5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#b4").hasClass("blank") ) {
-	      $("#b4").removeClass("blank").addClass("discRed");
+      } else if ( $("#b2").hasClass("blank") ) {
+	      $("#b2").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#b3").hasClass("blank") ) {
 	      $("#b3").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#b2").hasClass("blank") ) {
-	      $("#b2").removeClass("blank").addClass("discRed");
+      } else if ( $("#b4").hasClass("blank") ) {
+	      $("#b4").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#b1").hasClass("blank") ) {
-	      $("#b1").removeClass("blank").addClass("discRed");
+      } else if ( $("#b5").hasClass("blank") ) {
+	      $("#b5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+      } else if ( $("#b6").hasClass("blank") ) {
+	      $("#b6").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
-       if ( $("#b6").hasClass("blank") ) {
-  	     $("#b6").removeClass("blank").addClass("discBlue");
+       if ( $("#b1").hasClass("blank") ) {
+  	     $("#b1").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#b5").hasClass("blank") ) {
-	       $("#b5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#b4").hasClass("blank") ) {
-	       $("#b4").removeClass("blank").addClass("discBlue");
+       } else if ( $("#b2").hasClass("blank") ) {
+	       $("#b2").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#b3").hasClass("blank") ) {
 	       $("#b3").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#b2").hasClass("blank") ) {
-	       $("#b2").removeClass("blank").addClass("discBlue");
+       } else if ( $("#b4").hasClass("blank") ) {
+	       $("#b4").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#b1").hasClass("blank") ) {
-	       $("#b1").removeClass("blank").addClass("discBlue");
+       } else if ( $("#b5").hasClass("blank") ) {
+	       $("#b5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+       } else if ( $("#b6").hasClass("blank") ) {
+	       $("#b6").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
@@ -242,45 +242,45 @@ var columnBut4 = function() {
     if (turn%2 != 0) {
   	turn++;
 
-      if ( $("#d6").hasClass("blank") ) {  
-  	    $("#d6").removeClass("blank").addClass("discRed");
+      if ( $("#d1").hasClass("blank") ) {  
+  	    $("#d1").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#d5").hasClass("blank") ) {
-	      $("#d5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#d4").hasClass("blank") ) {
-	      $("#d4").removeClass("blank").addClass("discRed");
+      } else if ( $("#d2").hasClass("blank") ) {
+	      $("#d2").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#d3").hasClass("blank") ) {
 	      $("#d3").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#d2").hasClass("blank") ) {
-	      $("#d2").removeClass("blank").addClass("discRed");
+      } else if ( $("#d4").hasClass("blank") ) {
+	      $("#d4").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#d1").hasClass("blank") ) {
-	      $("#d1").removeClass("blank").addClass("discRed");
+      } else if ( $("#d5").hasClass("blank") ) {
+	      $("#d5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+      } else if ( $("#d6").hasClass("blank") ) {
+	      $("#d6").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
-       if ( $("#d6").hasClass("blank") ) {
-  	     $("#d6").removeClass("blank").addClass("discBlue");
+       if ( $("#d1").hasClass("blank") ) {
+  	     $("#d1").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#d5").hasClass("blank") ) {
-	       $("#d5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#d4").hasClass("blank") ) {
-	       $("#d4").removeClass("blank").addClass("discBlue");
+       } else if ( $("#d2").hasClass("blank") ) {
+	       $("#d2").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#d3").hasClass("blank") ) {
 	       $("#d3").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#d2").hasClass("blank") ) {
-	       $("#d2").removeClass("blank").addClass("discBlue");
+       } else if ( $("#d4").hasClass("blank") ) {
+	       $("#d4").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#d1").hasClass("blank") ) {
-	       $("#d1").removeClass("blank").addClass("discBlue");
+       } else if ( $("#d5").hasClass("blank") ) {
+	       $("#d5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+       } else if ( $("#d6").hasClass("blank") ) {
+	       $("#d6").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
@@ -360,45 +360,45 @@ var columnBut6 = function() {
     if (turn%2 != 0) {
   	turn++;
 
-      if ( $("#f6").hasClass("blank") ) {  
-  	    $("#f6").removeClass("blank").addClass("discRed");
+      if ( $("#f1").hasClass("blank") ) {  
+  	    $("#f1").removeClass("blank").addClass("discRed");
   	    $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#f5").hasClass("blank") ) {
-	      $("#f5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#f4").hasClass("blank") ) {
-	      $("#f4").removeClass("blank").addClass("discRed");
+      } else if ( $("#f2").hasClass("blank") ) {
+	      $("#f2").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       } else if ( $("#f3").hasClass("blank") ) {
 	      $("#f3").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#f2").hasClass("blank") ) {
-	      $("#f2").removeClass("blank").addClass("discRed");
+      } else if ( $("#f4").hasClass("blank") ) {
+	      $("#f4").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
-      } else if ( $("#f1").hasClass("blank") ) {
-	      $("#f1").removeClass("blank").addClass("discRed");
+      } else if ( $("#f5").hasClass("blank") ) {
+	      $("#f5").removeClass("blank").addClass("discRed");
+	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+      } else if ( $("#f6").hasClass("blank") ) {
+	      $("#f6").removeClass("blank").addClass("discRed");
 	      $(".turnDisplay").text("Turn: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
-       if ( $("#f6").hasClass("blank") ) {
-  	     $("#f6").removeClass("blank").addClass("discBlue");
+       if ( $("#f1").hasClass("blank") ) {
+  	     $("#f1").removeClass("blank").addClass("discBlue");
   	     $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#f5").hasClass("blank") ) {
-	       $("#f5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#f4").hasClass("blank") ) {
-	       $("#f4").removeClass("blank").addClass("discBlue");
+       } else if ( $("#f2").hasClass("blank") ) {
+	       $("#f2").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        } else if ( $("#f3").hasClass("blank") ) {
 	       $("#f3").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#f2").hasClass("blank") ) {
-	       $("#f2").removeClass("blank").addClass("discBlue");
+       } else if ( $("#f4").hasClass("blank") ) {
+	       $("#f4").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
-       } else if ( $("#f1").hasClass("blank") ) {
-	       $("#f1").removeClass("blank").addClass("discBlue");
+       } else if ( $("#f5").hasClass("blank") ) {
+	       $("#f5").removeClass("blank").addClass("discBlue");
+	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+       } else if ( $("#f6").hasClass("blank") ) {
+	       $("#f6").removeClass("blank").addClass("discBlue");
 	       $(".turnDisplay").text("Turn: " + turnDisplay++);
        }
      }
