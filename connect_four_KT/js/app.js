@@ -44,7 +44,7 @@ var turn = 1;
 var turnDisplay = 2;
 
 // displays initial turn number in #resultContainer
-$(".turnDisplay").text("Turn: 1");
+$(".turnDisplay").text("턴: 1");
 
 // initial blank value for player names
 var playerOneName = "";
@@ -67,49 +67,49 @@ var columnBut1 = function() {
 
       if ( $("#a6").hasClass("blank") ) {  // checking #a6 first b/c it is located on the "bottom" 
   	    $("#a6").removeClass("blank").addClass("discRed"); // removes blank class and adds discRed class that has red background color
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++); // updates #resultContainer turn number
+  	    $(".turnDisplay").text("턴: " + turnDisplay++); // updates #resultContainer turn number
       } else if ( $("#a5").hasClass("blank") ) {
 	      $("#a5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#a4").hasClass("blank") ) {
 	      $("#a4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#a3").hasClass("blank") ) {
 	      $("#a3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#a2").hasClass("blank") ) {
 	      $("#a2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#a1").hasClass("blank") ) {
 	      $("#a1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) { // this else if statement only runs for opponent
   	 turn++; 
 
        if ( $("#a6").hasClass("blank") ) {
   	     $("#a6").removeClass("blank").addClass("discBlue"); // removes blank class and adds discBlue class that has blue background color
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#a5").hasClass("blank") ) {
 	       $("#a5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#a4").hasClass("blank") ) {
 	       $("#a4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#a3").hasClass("blank") ) {
 	       $("#a3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#a2").hasClass("blank") ) {
 	       $("#a2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#a1").hasClass("blank") ) {
 	      $("#a1").removeClass("blank").addClass("discBlue");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 };  
 
@@ -126,49 +126,49 @@ var columnBut2 = function() {
 
       if ( $("#b6").hasClass("blank") ) {  
   	    $("#b6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#b5").hasClass("blank") ) {
 	      $("#b5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#b4").hasClass("blank") ) {
 	      $("#b4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#b3").hasClass("blank") ) {
 	      $("#b3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#b2").hasClass("blank") ) {
 	      $("#b2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#b1").hasClass("blank") ) {
 	      $("#b1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#b6").hasClass("blank") ) {
   	     $("#b6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#b5").hasClass("blank") ) {
 	       $("#b5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#b4").hasClass("blank") ) {
 	       $("#b4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#b3").hasClass("blank") ) {
 	       $("#b3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#b2").hasClass("blank") ) {
 	       $("#b2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#b1").hasClass("blank") ) {
 	       $("#b1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 };  
 
@@ -185,49 +185,49 @@ var columnBut3 = function() {
 
       if ( $("#c6").hasClass("blank") ) {  
   	    $("#c6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#c5").hasClass("blank") ) {
 	      $("#c5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#c4").hasClass("blank") ) {
 	      $("#c4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#c3").hasClass("blank") ) {
 	      $("#c3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#c2").hasClass("blank") ) {
 	      $("#c2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#c1").hasClass("blank") ) {
 	      $("#c1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#c6").hasClass("blank") ) {
   	     $("#c6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#c5").hasClass("blank") ) {
 	       $("#c5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#c4").hasClass("blank") ) {
 	       $("#c4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#c3").hasClass("blank") ) {
 	       $("#c3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#c2").hasClass("blank") ) {
 	       $("#c2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#c1").hasClass("blank") ) {
 	       $("#c1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 };  
 
@@ -244,49 +244,49 @@ var columnBut4 = function() {
 
       if ( $("#d6").hasClass("blank") ) {  
   	    $("#d6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#d5").hasClass("blank") ) {
 	      $("#d5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#d4").hasClass("blank") ) {
 	      $("#d4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#d3").hasClass("blank") ) {
 	      $("#d3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#d2").hasClass("blank") ) {
 	      $("#d2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#d1").hasClass("blank") ) {
 	      $("#d1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#d6").hasClass("blank") ) {
   	     $("#d6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#d5").hasClass("blank") ) {
 	       $("#d5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#d4").hasClass("blank") ) {
 	       $("#d4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#d3").hasClass("blank") ) {
 	       $("#d3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#d2").hasClass("blank") ) {
 	       $("#d2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#d1").hasClass("blank") ) {
 	       $("#d1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 }; 
 
@@ -303,49 +303,49 @@ var columnBut5 = function() {
 
       if ( $("#e6").hasClass("blank") ) {  
   	    $("#e6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#e5").hasClass("blank") ) {
 	      $("#e5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#e4").hasClass("blank") ) {
 	      $("#e4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#e3").hasClass("blank") ) {
 	      $("#e3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#e2").hasClass("blank") ) {
 	      $("#e2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#e1").hasClass("blank") ) {
 	      $("#e1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#e6").hasClass("blank") ) {
   	     $("#e6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#e5").hasClass("blank") ) {
 	       $("#e5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#e4").hasClass("blank") ) {
 	       $("#e4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#e3").hasClass("blank") ) {
 	       $("#e3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#e2").hasClass("blank") ) {
 	       $("#e2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#e1").hasClass("blank") ) {
 	       $("#e1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 }; 
 
@@ -362,49 +362,49 @@ var columnBut6 = function() {
 
       if ( $("#f6").hasClass("blank") ) {  
   	    $("#f6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#f5").hasClass("blank") ) {
 	      $("#f5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#f4").hasClass("blank") ) {
 	      $("#f4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#f3").hasClass("blank") ) {
 	      $("#f3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#f2").hasClass("blank") ) {
 	      $("#f2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#f1").hasClass("blank") ) {
 	      $("#f1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#f6").hasClass("blank") ) {
   	     $("#f6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#f5").hasClass("blank") ) {
 	       $("#f5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#f4").hasClass("blank") ) {
 	       $("#f4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#f3").hasClass("blank") ) {
 	       $("#f3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#f2").hasClass("blank") ) {
 	       $("#f2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#f1").hasClass("blank") ) {
 	       $("#f1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 }; 
 
@@ -421,49 +421,49 @@ var columnBut7 = function() {
 
       if ( $("#g6").hasClass("blank") ) {  
   	    $("#g6").removeClass("blank").addClass("discRed");
-  	    $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	    $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#g5").hasClass("blank") ) {
 	      $("#g5").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#g4").hasClass("blank") ) {
 	      $("#g4").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#g3").hasClass("blank") ) {
 	      $("#g3").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#g2").hasClass("blank") ) {
 	      $("#g2").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       } else if ( $("#g1").hasClass("blank") ) {
 	      $("#g1").removeClass("blank").addClass("discRed");
-	      $(".turnDisplay").text("Turn: " + turnDisplay++);
+	      $(".turnDisplay").text("턴: " + turnDisplay++);
       }
     } else if (turn%2 == 0) {
   	 turn++;
 
        if ( $("#g6").hasClass("blank") ) {
   	     $("#g6").removeClass("blank").addClass("discBlue");
-  	     $(".turnDisplay").text("Turn: " + turnDisplay++);
+  	     $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#g5").hasClass("blank") ) {
 	       $("#g5").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#g4").hasClass("blank") ) {
 	       $("#g4").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#g3").hasClass("blank") ) {
 	       $("#g3").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#g2").hasClass("blank") ) {
 	       $("#g2").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        } else if ( $("#g1").hasClass("blank") ) {
 	       $("#g1").removeClass("blank").addClass("discBlue");
-	       $(".turnDisplay").text("Turn: " + turnDisplay++);
+	       $(".turnDisplay").text("턴: " + turnDisplay++);
        }
      }
   }
   } else {
-  	  alert("Press start to play.");
+  	  alert("시작버튼 누르세요.");
   }   
 }; 
 
@@ -473,7 +473,7 @@ var checkWin = function() {
   if ( (checkTie() == true) || ( checkHorizontal() == true ) || ( checkVertical() == true ) ||  (checkDiagonal() == true) ) {
 	$(".column").children().attr("class", "blank"); // removes all the cells' classes and replaces it with class "blank"
 	turn = 1; // resets turn to 1
-	$(".turnDisplay").text("Turn: 1"); // resets turn text in resultContainer
+	$(".turnDisplay").text("턴: 1"); // resets turn text in resultContainer
     turnDisplay = 2; // resets turn display to 1
 	}
   // updates total player wins in #resultContainer
@@ -507,12 +507,12 @@ var checkHorizontal = function  () {
   	  if (currentRowString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
   	    // audio victory triggers before alert pops
   	    audioVictory.play();
-  	    alert(playerTwoName + " wins!");
+  	    alert(playerTwoName + " 님이 이겼습니다!");
   	    playerTwoWinCount++;
   	    return true;	
   	  } else if (currentRowString.indexOf("discReddiscReddiscReddiscRed") != -1) {
   	  	audioVictory.play();
-  	  	alert(playerOneName + " wins!");
+  	  	alert(playerOneName + " 님이 이겼습니다!");
 	    playerOneWinCount++;
   	  	return true;
   	  }
@@ -536,12 +536,12 @@ var checkVertical = function() {
 		//console.log(currentColumnString);
 		  if (currentColumnString.indexOf('discBluediscBluediscBluediscBlue') != -1){
 			audioVictory.play();
-			alert(playerTwoName + " wins!");
+			alert(playerTwoName + " 님이 이겼습니다!");
 			playerTwoWinCount++;
 			return true;
 		  } else if (currentColumnString.indexOf('discReddiscReddiscReddiscRed') != -1){
 			  audioVictory.play();
-			  alert(playerOneName + " wins!");
+			  alert(playerOneName + " 님이 이겼습니다!");
 			  playerOneWinCount++;
 			  return true;
 		  }
@@ -581,12 +581,12 @@ var checkDiagonal = function() {
 
   	  if (currentDiagonalString.indexOf("discBluediscBluediscBluediscBlue") != -1) {
   	  	audioVictory.play();
-  	  	alert(playerTwoName + " wins!");
+  	  	alert(playerTwoName + "님이 이겼습니다!");
 		playerTwoWinCount++;
   	  	return true;
   	  } else if (currentDiagonalString.indexOf("discReddiscReddiscReddiscRed") != -1) {
   	  	  audioVictory.play();
-  	  	  alert(playerOneName + " wins!");
+  	  	  alert(playerOneName + "님이 이겼습니다!");
 		  playerOneWinCount++;
   	  	  return true;
   	  }
@@ -597,7 +597,7 @@ var checkDiagonal = function() {
 var checkTie = function() {
 	console.log("checking tie");
 	if ( (turn == 43) && (checkHorizontal() == undefined) && (checkVertical() == undefined) && (checkDiagonal() == undefined) ) {
-	  alert("It's a tie!");
+	  alert("비김!");
 	  return true;
 	} else {
 	    return false;
@@ -610,14 +610,14 @@ var checkTie = function() {
 // minor bug where ":0" pops up after pressing column button before pressing start persists
 var startBut = function () {
   console.log("start button clicked.")
-  playerOneName = prompt("Type in player one's name:");
+  playerOneName = prompt("참가자 일의 이름을 입력 하세요.");
     if (playerOneName === null) {
-      playerOneName = "Player One";
+      playerOneName = "참가자 일";
     }
   $("#playerOneDisplay").text(playerOneName + ":");
-  playerTwoName = prompt("Type in player two's name:");
+  playerTwoName = prompt("참가자 이의 이름을 입력 하세요.");
     if (playerTwoName === null) {
-      playerTwoName = "Player Two";
+      playerTwoName = "참가자 이";
     }
   $("#playerTwoDisplay").text(playerTwoName + ":");
   
@@ -627,7 +627,7 @@ var startBut = function () {
 // how to play button
 var howToPlayBut = function() {
   console.log("how to play button clicked");
-  alert("Line four of your discs together either vertically, horizontally, or diagnoally!");
+  alert("4개의 게임 피스들을 가로, 세로, 또는 대각선으로 나열하세요.");
 };
 
 // reset button
@@ -635,8 +635,6 @@ var resetBut = function() {
   console.log("reset button clicked");
   $(".column").children().attr("class", "blank");
   turn = 1;
-  $(".turnDisplay").text("Turn: 1");
+  $(".turnDisplay").text("턴: 1");
   turnDisplay = 2;
 }
-
-
